@@ -3,7 +3,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>sample</title>
+<title>sample2</title>
 <style>
 table td {
     padding: 30px;
