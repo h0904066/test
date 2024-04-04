@@ -15,6 +15,7 @@ table td {
 </head>
 <body>
 
+<h1>sample</h1>
 <form action="sample-jump.php" id="form" method="post" onsubmit="return take()">
 <table border="1">
     <tr>
@@ -54,7 +55,8 @@ table td {
 <input type="submit" value="CHECK">
 </form>
 </body>
-<script src="../../_common/scripts/jquery-3.4.1.min.js"></script>
+<!-- <script src="../../_common/scripts/jquery-3.4.1.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
     'use strict';
 
