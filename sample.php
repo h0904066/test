@@ -5,47 +5,55 @@
 <meta charset="UTF-8">
 <title>sample</title>
 <style>
+body {
+    width: 950px;
+}
+table {
+    width: 450px;
+}
 table td {
     padding: 30px;
 }
 .hidden {
     display: none;
 }
+select {
+    width: 50px;
+}
 </style>
 </head>
 <body>
 
 <form action="sample-jump.php" id="form" method="post" onsubmit="return take()">
-<table border="1">
+
+<table border="1" id="cow-table">
     <tr>
         <td>
             <select name="cows" id="cows" class="kind" >
-                <option value="non">-</option>
+                <option value="non" >-</option>
                 <option value="mom">A</option>
             </select>
             <!-- <img src="" alt="" class="hidden_img"> -->
-            <p class="hidden"><label><input type="radio" name="num" value="1">1</label>
-                <label><input type="radio" name="num" value="2">2</label><label><input type="radio" name="num" value="3">3</label>
-                <label><input type="radio" name="num" value="4">4</label><label><input type="radio" name="num" value="5">5</label>
-                <label><input type="radio" name="num"  value="6">6</label></p>
+            <p class="hidden">
+                <?php for ($i = 1; $i <= 6; $i++) : ?>
+                    <label><input type="radio" name="num" value="<?= $i ?>"><?= $i ?></label>
+                <?php endfor; ?>
+                </p>
             <br>
             <select name="cows2" id="cows2" class="kind" >
                 <option value="non">-</option>
                 <option value="fam">Aa</option>
             </select>
             <!-- <img src="" alt="" class="hidden_img"> -->
-            <p class="hidden"><label><input type="radio" name="num2"  value="1">1</label>
-                <label><input type="radio" name="num2" value="2">2</label><label><input type="radio" name="num2" value="3">3</label>
-                <label><input type="radio" name="num2" value="4">4</label></p>
+            <p class="hidden">
+            <?php for ($i = 1; $i <= 4; $i++) : ?>
+                <label><input type="radio" name="num2"  value="<?= $i ?>"><?= $i ?></label>
+            <?php endfor; ?>
+            </p>
         </td>
-        <td>
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
     </tr>
 </table>
+
 </br>
 <input type="hidden" name="total" id="total">
 <input type="hidden" name="total2" id="total2">
@@ -103,6 +111,9 @@ table td {
         selectChange(numbtn, numbtn2);
         return true;
     }
+
+    let table1 = document.getElementById('cow-table');
+        for 
 
 </script>
 </html>
