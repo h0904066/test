@@ -68,18 +68,13 @@ select {
 
     $(document).ready(function(){
         $('.kind').change(function(){
-            // console.log('AAA')
             $(this).next().toggleClass('hidden');
         });
     });
 
     function cal() {
         const numbtn = document.querySelector('input[name="num"]:checked').value;
-        // console.log(numbtn);
-
-        const numbtn2 = document.querySelector('input[name="num2"]:checked').value;
-        // console.log(numbtn2);
-        
+        const numbtn2 = document.querySelector('input[name="num2"]:checked').value;        
         return {numbtn, numbtn2};
 
     }
@@ -90,16 +85,9 @@ select {
 
         document.getElementById('type').value = value;
         document.getElementById('type2').value = value2;
-        // console.log(document.getElementById('type').value);
-        // console.log(value);
-        // console.log(value2);
 
         const total = value + cal().numbtn + '頭';
         const total2 = value2 + cal().numbtn2 + '頭';
-
-        // console.log(total);
-        // console.log(total2);
-
     }
 
     function take() {
